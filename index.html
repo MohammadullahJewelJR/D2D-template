@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filterable Product Page</title>
+
+    <!-- ====================== STYLE SHEET =========== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+      <div class="main-section">
+                <!-- ================== START SIDEBAR NAVIGATION ========== -->
+              <div id="mySidebar" class="sidebar">
+                <div class="logo">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="text-decoration: none;">×</a>
+                </div>
+                <ul>
+                    <img src="assets/img/desktop-logo.png" alt="Desktop Logo">
+                    <li><a href="#"><label><i class="far fa-calendar-check"></i> Week Offers</label> <span>24</span></i> </a></li>
+                    <li><a href="#"><label> <i class="far fa-gem"></i> Best deals</label><span>324</span></a></li>          
+                    <li><a href="#"><label> <i class="far fa-gem"></i> Favourites</label><span>324</span></a></li>
+                    <li><a href="#"><label><i class="far fa-envelope"></i> Auctions</label><span class="date">12 May 2021</span></a></li>
+                </ul>
+                <h3>My D2D</h3>
+                <ul>
+                    <li><a href="#"><label> <i class="fas fa-tv"></i> MY Ads</label><span class="ads">35</span></a></li>
+                    <li><a href="#"><label> <i class="fas fa-chart-pie"></i> Place an ad</label></a></li>
+                    <li><a href="#"><label> <i class="far fa-chart-bar"></i> Auction Ads</label</a></li>
+                    <li class="dropdown-btn">
+                      <a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements<i class="fas fa-less-than"></i></a>
+                    </li>
+                    <ul class="dropdown-container" id="products">
+                        <li class="active"><a href="#">CSS3 Animation</a></li>
+                        <li><a href="#">General</a></li>
+                        <li><a href="#">Buttons</a></li>
+                        <li><a href="#">Tabs & Accordions</a></li>
+                        <li><a href="#">Typography</a></li>
+                        <li><a href="#">FontAwesome</a></li>
+                        <li><a href="#">Slider</a></li>
+                        <li><a href="#">Panels</a></li>
+                        <li><a href="#">Widgets</a></li>
+                        <li><a href="#">Bootstrap Model</a></li>
+                    </ul>
+                </ul>
+                <hr>
+                <ul>
+                    <li><a href="#"><label><i class="fas fa-cog"></i> Definitions </label></a></li>
+                    <li><a href="#"><label><i class="far fa-user-circle"></i> Company/Users </label></a></li>
+                    <li><a href="#"><label><i class="fas fa-chart-pie"></i> Invoices </label></a></li>
+                    <li><a href="#"><label><i class="fas fa-flask"></i> Help us to help you </label></a></li>
+                    <li><a href="#"><label><i class="fas fa-portrait"></i> Members List </label></a></li>
+                    <li><a href="#"><label><i class="fas fa-flask"></i> Contact Us</label></a></li>
+                </ul>
+                <div class="sidebar-footer-text">
+                  <h3>Dealears Only....</h3>
+                  <p>Restrlted access to professionals</p>
+                </div>
+            </div>
+          <!-- ================== END SIDEBAR NAVIGATION ========== -->
+          <!-- ========================= START MAIN AREA ================ -->
+          <div id="main">
+            <!-- =============== START HEADER AREA ============= -->
+            <div class="header-area">
+              <div class="header-top">
+                <div class="filter">
+                <ul>
+                    <li class="filter-btn active"><a href="#"  data-filter="Construction"><span>Construction</span> equipment</a></li>
+                    <li class="filter-btn "><a href="#" data-filter="trucks"><span>Trucks</span>Bus</a></li>
+                    <li class="filter-btn "><a href="#" data-filter="farms"><span>Farms</span>equipment</a></li>
+                    <li class="filter-btn "><a href="#" data-filter="forestry"><span>Forestry</span>equipment</a></li>
+                    <li class="filter-btn "><a href="#" data-filter="lifting"><span>Lfting</span>Handeling</a></li>
+                </ul>
+                </div>
+                <div class="mobile-logo">
+                  <div class="logo2">
+                    <a href="#"><img src="assets/img/mobile-logo.png" alt=""></a>
+                  </div>
+                </div>
+                <button class="openbtn" onclick="openNav()"><span class="bars">☰</span></button>
+                <!-- ============== START SEARCH BOX ============= -->
+                <div class="search-box">
+                  <form action="" onsubmit="return false">
+                    <input type="text" id="search2" class="search" placeholder="equipment">
+                    <label><i class="fas fa-search"></i></label>
+                  </form>
+                </div>
+                <!-- =============== END SEARCH BOX ============== -->
+                <!-- =============== START LOGIN AREA ================ -->
+                <div class="login-area">
+                  <a href="#" class="message-icon"><i class="far fa-envelope"></i><span class="message">16</span></a>
+                    <div class="language-select">
+                        <ul>
+                          <li><img class="language" id="mainImg" src="assets/img/flag/Bangladesh.png" alt="Bangladesh">
+                            <ul class="drop-select">
+                                <li id="same"> <a href="#"><img onclick="myFunction(this)" src="assets/img/flag/Bangladesh.png" alt="Bengali">Bengali</a></li>
+                                <li id="same"> <a href="#"><img onclick="myFunction(this)" src="assets/img/flag/France.png" alt="Spanish">Spanish</a></li>
+                                <li id="same"> <a href="#"><img onclick="myFunction(this)" src="assets/img/flag/Germany.png" alt="German">German</a></li>
+                                <li id="same"> <a href="#"><img onclick="myFunction(this)" src="assets/img/flag/United-States.png" alt="United States">English</a></li>
+                                <li id="same"> <a href="#"><img onclick="myFunction(this)" src="assets/img/flag/Japan.png" alt="Japanise">Japanise</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </div>
+                  <div class="login">
+                    <a href="#" class="message-icon"><i class="fas fa-sign-in-alt"></i><span class="log-out">Log Out</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-bottom">
+                <div class="header-bottom-content">
+                  <h2>D2D - Equipment [Escavators] </h2>
+                  <p>Home / E-commerce / <span>Products grid</span></p>
+                </div>
+                <h3>Dealers Only....</h3>
+              </div>
+            </div>
+            <!-- ====================== END HEADER AREA ============ -->
+            <!-- ================ START FILTER AREA ============== -->
+            <div class="filter-area" id="mySidebarFilter">
+                <div class="filter-box">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeFilter()" style="text-decoration: none;">×</a>
+                    <h2 class="filter-heading">filter</h2>
+                    <div class="tags">
+                        <p>camioes <span>X</span></p>
+                    </div>
+                    <!-- ====================== FIRST CATEGORIES ============= -->
+                    <label class="label" for="cat1">Carrocaria <i  class="fas fa-arrow-circle-up"></i></label>
+                    <input id="cat1" type="checkbox">
+                    <div class="caterories1">
+                        <div class="search-item">
+                           <form action="" onsubmit="return false">
+                              <input type="text" id="search" placeholder="Procurar">
+                              <label><i class="fas fa-search"></i></label>
+                           </form>
+                        </div>
+                        <div class="check-box">
+                            <label class="filter-label filter-all"  for="1 filter-all"><input  id="1 filter-all" class="filter-input filter-label" name="filter" type="checkbox">Basculantes (2267)</label>
+                            <label class="filter-label filter-all"  for="2 filter-all"><input  id="2 filter-all" class="filter-input filter-label" name="filter" type="checkbox">Estrados e caixas abertas (1743)</label>
+                            <label class="filter-label filter-all"  for="3 filter-all"><input  id="3 filter-all" class="filter-input filter-label" name="filter" type="checkbox">Furgoes (1688) </label>
+                            <label class="filter-label filter-all"  for="4 filter-all"><input  id="4 filter-all" class="filter-input filter-label" name="filter" type="checkbox">Frigorificos (1151)</label>
+                            <label class="filter-label filter-all"  for="5 filter-all"><input  id="5 filter-all" class="filter-input filter-label" name="filter" type="checkbox">Poli-basculantes (938)</label>
+                            <label class="filter-label filter-all"  for="6 filter-all"><input  id="6 filter-all" class="filter-input filter-label" name="filter" type="checkbox">Chassis (899)</label>
+                            <label class="filter-label filter-all"  for="7 filter-all"><input  id="7 filter-all" class="filter-input filter-label" name="filter" type="checkbox">Cisternas (691)</label>
+                            <a href="#">Mostrar mais</a>
+                        </div>
+                    </div>
+                    <!-- =========================== SECOND CATEGORIES ============== -->
+                    <label class="label" for="cat2"> Marca <i class="fas fa-arrow-circle-up"></i></label>
+                    <input id="cat2" type="checkbox">
+                    <div class="caterories2">
+                        <div class="search-item">
+                            <form action="" onsubmit="return false">
+                              <input type="text" id="search" placeholder="Procurar">
+                              <label><i class="fas fa-search"></i></label>
+                            </form>
+                        </div>
+                        <div class="check-box">
+                            <label class="filter-label filter-all"  for="8 filter-all"><input id="8" filter-all class="filter-input" filter-label name="filter" type="checkbox">Basculantes (2267)</label>
+                            <label class="filter-label filter-all"  for="9 filter-all"><input id="9" filter-all class="filter-input" filter-label name="filter" type="checkbox">Estrados e caixas abertas (1743)</label>
+                            <label class="filter-label filter-all"  for="1 filter-all0"><input id="1 filter-all0" class="filter-inpu filter-labelt" name="filter" type="checkbox">Furgoes (1688) </label>
+                            <label class="filter-label filter-all"  for="1 filter-all1"><input id="1 filter-all1" class="filter-inpu filter-labelt" name="filter" type="checkbox">Frigorificos (1151)</label>
+                            <label class="filter-label filter-all"  for="1 filter-all2"><input id="1 filter-all2" class="filter-inpu filter-labelt" name="filter" type="checkbox">Poli-basculantes (938)</label>
+                            <label class="filter-label filter-all"  for="1 filter-all3"><input id="1 filter-all3" class="filter-inpu filter-labelt" name="filter" type="checkbox">Chassis (899)</label>
+                            <label class="filter-label filter-all"  for="1 filter-all4"><input id="1 filter-all4" class="filter-inpu filter-labelt" name="filter" type="checkbox">Cisternas (691)</label>
+                            <a href="#">Mostrar mais</a>
+                        </div>
+                    </div>
+                    <!-- ============ PRICE ============== -->
+                    <h2>Preco</h2>
+                    <div class="price-box">
+                        <input id="price1" onclick="myFunction(this)" type="text" placeholder="0 $">
+                        <input id="price2" onclick="myFunction(this)" type="text" placeholder="24343 $">
+                        <input id="price3" type="submit" value="Ok">
+
+                        <label><input type="checkbox">Com Preco()</label>
+                    </div>
+                    <!-- ============================= THIRD CATEGORIES ================== -->
+                    <label class="label" for="cat3">Norma Euro <i  class="fas fa-arrow-circle-up"></i></label>
+                    <input id="cat3" type="checkbox">
+                    <div class="caterories3">
+                        <div class="search-item">
+                          <form action="" onsubmit="return false">
+                            <input type="text" id="search" placeholder="Procurar">
+                            <label><i class="fas fa-search"></i></label>
+                          </form>
+                        </div>
+                        <div class="check-box">
+                            <label class="filter-label filter-all"  for="1 filter-all5"><input id="1 filter-all5" class="filter-inpu filter-labelt" name="filter" type="checkbox">Basculantes (2267)</label>
+                            <label class="filter-label filter-all"  for="1 filter-all6"><input id="1 filter-all6" class="filter-inpu filter-labelt" name="filter" type="checkbox">Estrados e caixas abertas (1743)</label>
+                            <label class="filter-label filter-all"  for="1 filter-all7"><input id="1 filter-all7" class="filter-inpu filter-labelt" name="filter" type="checkbox">Furgoes (1688) </label>
+                            <label class="filter-label filter-all"  for="1 filter-all8"><input id="1 filter-all8" class="filter-inpu filter-labelt" name="filter" type="checkbox">Frigorificos (1151)</label>
+                            <label class="filter-label filter-all"  for="1 filter-all9"><input id="1 filter-all9" class="filter-inpu filter-labelt" name="filter" type="checkbox">Poli-basculantes (938)</label>
+                            <label class="filter-label filter-all"  for="2 filter-all0"><input id="2 filter-all0" class="filter-inpu filter-labelt" name="filter" type="checkbox">Chassis (899)</label>
+                            <label class="filter-label filter-all"  for="2 filter-all1"><input id="2 filter-all1" class="filter-inpu filter-labelt" name="filter" type="checkbox">Cisternas (691)</label>
+                            <a href="#">Mostrar mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ================ END FILTER AREA ============== -->
+            <!-- ========================= START FILTER PRODUCTS ================= -->
+            <div class="Search-filter">
+              <div class="filter-search-box" onclick="openFilter()">
+                <label><i class="fas fa-search"></i> filter</label>
+              </div>
+              <div class="order-filter">
+                <label><i class="fas fa-exchange-alt"></i>order</label>
+                <ul>
+                  <li><a href="#">Order Option 1</a></li>
+                  <li><a href="#">Order Option 2</a></li>
+                  <li><a href="#">Order Option 3</a></li>
+                  <li><a href="#">Order Option 4</a></li>
+                  <li><a href="#">Order Option 5</a></li>
+                </ul>
+              </div>
+            </div>
+        <div class="main-product">
+            <div class="slide-container">
+                <div class="container" id="sorte-products">
+                    <div class="store-product trucks Cisternas(691) ">
+                      <div class="product-header-icon">
+                        <i class="far fa-thumbs-up"></i>
+                        <h3>Best <b>Deal</b></h3>
+                        <div class="icon">
+                          <i class="far fa-star"></i>
+                          <i class="fas fa-wrench"></i>
+                        </div>
+                      </div>
+                        <img src="assets/img/t1.jpg" alt="">
+                        <div class="products-details">
+                            <span>23,000c</span>
+                            <h3>Trucks-Benz 2584</h3>
+                            <p>YEAR:2013 <br> Kms: 2015.000</p>
+                            <p>Company S.A. + Contry</p>
+                            <a href="#">Infor &#8594;</a>
+                        </div>
+                    </div>
+                    <div class="store-product  farms Poli-basculantes(938)">
+                      <div class="product-header-icon">
+                        <i class="far fa-thumbs-up"></i>
+                        <h3>Best <b>Deal</b></h3>
+                        <div class="icon">
+                          <i class="far fa-star"></i>
+                          <i class="fas fa-wrench"></i>
+                        </div>
+                      </div>
+                        <img src="assets/img/f1.jpg" alt="">
+                        <div class="products-details">
+                            <span>23,000c</span>
+                            <h3>Duck 2584</h3>
+                            <p>YEAR:2013 <br> Kms: 2015.000</p>
+                            <p>Company S.A. + Contry</p>
+                            <a href="#">Infor &#8594;</a>
+                        </div>
+                    </div>
+                    <div class="store-product lifting Frigorificos(1151)">
+                      <div class="product-header-icon">
+                        <i class="far fa-thumbs-up"></i>
+                        <h3>Best <b>Deal</b></h3>
+                        <div class="icon">
+                          <i class="far fa-star"></i>
+                          <i class="fas fa-wrench"></i>
+                        </div>
+                      </div>
+                        <img src="assets/img/L1.jpg" alt="">
+                        <div class="products-details">
+                            <span>23,000c</span>
+                            <h3>Lifting-1 2584</h3>
+                            <p>YEAR:2013 <br> Kms: 2015.000</p>
+                            <p>Company S.A. + Contry</p>
+                            <a href="#">Infor &#8594;</a>
+                        </div>
+                    </div>
+                    <div class="store-product  forestry Furgoes(1688)">
+                      <div class="product-header-icon">
+                        <i class="far fa-thumbs-up"></i>
+                        <h3>Best <b>Deal</b></h3>
+                        <div class="icon">
+                          <i class="far fa-star"></i>
+                          <i class="fas fa-wrench"></i>
+                        </div>
+                      </div>
+                        <img src="assets/img/f3.jpg" alt="">
+                        <div class="products-details">
+                            <span>23,000c</span>
+                            <h3>Farms 2584</h3>
+                            <p>YEAR:2013 <br> Kms: 2015.000</p>
+                            <p>Company S.A. + Contry</p>
+                            <a href="#">Infor &#8594;</a>
+                        </div>
+                    </div>
+                    <div class="store-product  lifting Estradosecaixasabertas(1743)">
+                      <div class="product-header-icon">
+                        <i class="far fa-thumbs-up"></i>
+                        <h3>Best <b>Deal</b></h3>
+                        <div class="icon">
+                          <i class="far fa-star"></i>
+                          <i class="fas fa-wrench"></i>
+                        </div>
+                      </div>
+                        <img src="assets/img/L2.jpg" alt="">
+                        <div class="products-details">
+                            <span>23,000c</span>
+                            <h3>Lifting 2584</h3>
+                            <p>YEAR:2013 <br> Kms: 2015.000</p>
+                            <p>Company S.A. + Contry</p>
+                            <a href="#">Infor &#8594;</a>
+                        </div>
+                    </div>
+                    <div class="store-product  trucks Basculantes(2267)">
+                      <div class="product-header-icon">
+                        <i class="far fa-thumbs-up"></i>
+                        <h3>Best <b>Deal</b></h3>
+                        <div class="icon">
+                          <i class="far fa-star"></i>
+                          <i class="fas fa-wrench"></i>
+                        </div>
+                      </div>
+                        <img src="assets/img/t2.jpg" alt="">
+                        <div class="products-details">
+                            <span>23,000c</span>
+                            <h3>Trucks-Benz 2584</h3>
+                            <p>YEAR:2013 <br> Kms: 2015.000</p>
+                            <p>Company S.A. + Contry</p>
+                            <a href="#">Infor &#8594;</a>
+                        </div>
+                    </div>
+                    <div class="store-product  farms Cisternas (691)">
+                      <div class="product-header-icon">
+                        <i class="far fa-thumbs-up"></i>
+                        <h3>Best <b>Deal</b></h3>
+                        <div class="icon">
+                          <i class="far fa-star"></i>
+                          <i class="fas fa-wrench"></i>
+                        </div>
+                      </div>
+                        <img src="assets/img/f2.jpg" alt="">
+                        <div class="products-details">
+                            <span>23,000c</span>
+                            <h3>Farms-Benz 2584</h3>
+                            <p>YEAR:2013 <br> Kms: 2015.000</p>
+                            <p>Company S.A. + Contry</p>
+                            <a href="#">Infor &#8594;</a>
+                        </div>
+                    </div>
+                    <div class="store-product forestry Basculantes (2267)">
+                      <div class="product-header-icon">
+                        <i class="far fa-thumbs-up"></i>
+                        <h3>Best <b>Deal</b></h3>
+                        <div class="icon">
+                          <i class="far fa-star"></i>
+                          <i class="fas fa-wrench"></i>
+                        </div>
+                      </div>
+                        <img src="assets/img/f5.jpg" alt="">
+                        <div class="products-details">
+                            <span>23,000c</span>
+                            <h3>Forestry 2584</h3>
+                            <p>YEAR:2013 <br> Kms: 2015.000</p>
+                            <p>Company S.A. + Contry</p>
+                            <a href="#">Infor &#8594;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========================= END FILTER PRODUCTS ================= -->
+
+        </div>
+    </div>
+    <!-- ==================== END MAIN AREA =================== -->
+
+    <!-- ==================== JAVASCRIPT ============= -->
+    <script src="assets/js/jquery-3.4.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/fontawesome.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

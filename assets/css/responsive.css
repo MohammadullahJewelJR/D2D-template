@@ -1,0 +1,122 @@
+/* ========== SIDEBAR  NAVIGATION ========= */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+@media screen and (max-width:1280px) {
+  .store-product {
+    min-width: 150px;
+    width: 31%;
+  }
+}
+@media screen and (max-width:1100px) {
+    .sidebar .closebtn {
+    display:block;
+  }
+  .sidebar{
+      width:0;
+  }
+  #main{
+      margin-left:0;
+  }
+  .log-out{
+    display: none;
+  }
+  .filter{
+    display: none;
+  }
+  .header-area{
+    top:0;
+  }
+  .mobile-logo .logo2 img{
+    display: block;
+  }
+  .openbtn{
+    display: block;
+    margin-right: auto;
+  }
+  .search-box{
+    display: block;
+    margin-left: 5px;
+  }
+  .message-icon i{
+    padding-right: 5px;
+  }
+  /* ****************** FILTER AREA ************ */
+  .filter-area{
+    left:-200%;
+    top:0;
+    position: fixed;
+  }
+  .filter-box .closebtn{
+    display: block;
+  }
+  .main-product{
+    margin-left: 0;
+  }
+  .filter-search-box, .order-filter {
+    display: block;
+  }
+}
+@media screen and (max-width: 900px ) {
+  .store-product{
+    width:45%;
+  }
+}
+@media screen and (max-width:768px ) {
+  .store-product {
+    width: 95%;
+  }
+  .store-product img {
+    height: 100%;
+  }
+  .Search-filter {
+    left:15px;
+  }
+}
+@media screen and (max-width: 580px ) {
+  .mobile-logo .logo2 img{
+    width:100px;
+    object-fit: cover;
+  }
+  .search-box input {
+    width: 90%;
+  }
+  .header-bottom h3{
+    display: none;
+  }
+  .header-bottom-content h2{
+    font-size: 20px;
+  }
+}
+
+
+/* ********************** BOOTSTRAP CONTAINER RESPONSIVE CHANG3E ************* */
+
+ @media (min-width:576px) {
+  .container {
+   max-width:100% !important;
+  }
+ }
+ @media (min-width:768px) {
+  .container {
+   max-width:100% !important;
+  }
+ }
+ @media (min-width:992px) {
+  .container {
+   max-width:100% !important;
+  }
+ }
+ @media (max-width:1280px) {
+  .store-product {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+}
+/* @media (min-width: 1100px) {
+  .filter-area{
+    left:230px;
+  }
+} */
