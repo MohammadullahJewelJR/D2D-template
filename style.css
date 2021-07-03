@@ -360,7 +360,7 @@ body {
   position: absolute;
   top: 158px;
   overflow: scroll;
-  min-height: 800px;
+  min-height: 1000px;
   background: #FFFFFF;
   height: 100vh;
   z-index: 8888888;
