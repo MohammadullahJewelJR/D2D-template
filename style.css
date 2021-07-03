@@ -647,6 +647,8 @@ input:checked + .caterories3 {
   transition: .3s;
   visibility: hidden;
   opacity: 0;
+  width:180px;
+  text-align:left;
 }
 .order-filter:hover ul {
   opacity: 1;
