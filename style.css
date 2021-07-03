@@ -354,14 +354,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .filter-area {
-	max-width: 250px;
-	border: 1px solid #ccc;
-	padding: 10px;
-	position: absolute;
-	top: 158px;
-	overflow: scroll;
-	min-height: 100%;
-	background: #FFFFFF;
+  max-width: 250px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute;
+  top: 158px;
+  overflow: scroll;
+  min-height: 800px;
+  background: #FFFFFF;
   height: 100vh;
   z-index: 8888888;
   transition: .6s;
